@@ -8,5 +8,6 @@ public class PercentageRule extends EligibilityRule {
     @Override
     public boolean check(Candidate candidate, Job job) {
         return candidate.getPercentage() >= job.getMinimumPercentage();
+    
     }
 }
