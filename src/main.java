@@ -9,7 +9,14 @@ public class main {
         int backlogs = scanner.nextInt();
         int graduationYear = scanner.nextInt();
 
-        Candidate candidate = new Candidate(name, percentage, backlogs, graduationYear);
+        int skillCount = scanner.nextInt();
+        String[] skills = new String[skillCount];
+
+        for (int i = 0; i < skillCount; i++) {
+            skills[i] = scanner.next();
+        }
+
+        Candidate candidate = new Candidate(name, percentage, backlogs, graduationYear, skills);
         Job job = new Job("Infosys", "Java Developer", 65.0, 0, 2026);
 
         EligibilityChecker checker = new EligibilityChecker();
